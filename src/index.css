@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Monastery360 Design System - Heritage & Modern */
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    --background: 0 0% 100%;
+    --foreground: 222 84% 5%;
+    
+    /* Heritage Indigo - Primary Brand */
+    --primary: 222 84% 5%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 222 84% 15%;
+    
+    /* Saffron Gold - Sacred Accent */
+    --secondary: 41 91% 50%;
+    --secondary-foreground: 222 84% 5%;
+    --saffron: 41 91% 50%;
+    --saffron-light: 41 91% 60%;
+    --saffron-dark: 41 91% 40%;
+    
+    /* Heritage UI Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 222 84% 5%;
+    --card-heritage: 222 20% 98%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 84% 5%;
+    
+    --muted: 222 20% 96%;
+    --muted-foreground: 222 20% 45%;
+    
+    --accent: 41 30% 95%;
+    --accent-foreground: 222 84% 5%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 222 20% 90%;
+    --input: 222 20% 90%;
+    --ring: 41 91% 50%;
+    
+    /* Sacred Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(222 84% 5%), hsl(222 84% 15%));
+    --gradient-saffron: linear-gradient(135deg, hsl(41 91% 50%), hsl(41 91% 60%));
+    --gradient-heritage: linear-gradient(180deg, hsl(0 0% 100%), hsl(222 20% 98%));
+    --gradient-prayer: linear-gradient(45deg, hsl(41 91% 50%) 0%, hsl(0 84% 60%) 25%, hsl(120 60% 50%) 50%, hsl(240 84% 60%) 75%, hsl(41 91% 50%) 100%);
+    
+    /* Sacred Shadows */
+    --shadow-heritage: 0 10px 40px -10px hsl(222 84% 5% / 0.15);
+    --shadow-saffron: 0 10px 30px -10px hsl(41 91% 50% / 0.3);
+    --shadow-soft: 0 4px 20px -5px hsl(222 20% 20% / 0.1);
+    --shadow-glow: 0 0 40px hsl(41 91% 50% / 0.2);
+    
+    /* Typography Scale */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Nunito', sans-serif;
+    
+    /* Sacred Animations */
+    --transition-sacred: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222 84% 5%;
+    --foreground: 0 0% 98%;
+    
+    --primary: 0 0% 98%;
+    --primary-foreground: 222 84% 5%;
+    --primary-glow: 222 84% 25%;
+    
+    --secondary: 41 91% 55%;
+    --secondary-foreground: 222 84% 5%;
+    --saffron: 41 91% 55%;
+    --saffron-light: 41 91% 65%;
+    --saffron-dark: 41 91% 45%;
+    
+    --card: 222 50% 8%;
+    --card-foreground: 0 0% 98%;
+    --card-heritage: 222 50% 10%;
+    
+    --popover: 222 50% 8%;
+    --popover-foreground: 0 0% 98%;
+    
+    --muted: 222 50% 15%;
+    --muted-foreground: 222 20% 65%;
+    
+    --accent: 222 50% 15%;
+    --accent-foreground: 0 0% 98%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 222 50% 20%;
+    --input: 222 50% 15%;
+    --ring: 41 91% 55%;
+    
+    --gradient-hero: linear-gradient(135deg, hsl(222 84% 5%), hsl(222 50% 15%));
+    --gradient-saffron: linear-gradient(135deg, hsl(41 91% 55%), hsl(41 91% 65%));
+    --gradient-heritage: linear-gradient(180deg, hsl(222 50% 8%), hsl(222 50% 10%));
+    
+    --shadow-heritage: 0 10px 40px -10px hsl(0 0% 0% / 0.3);
+    --shadow-saffron: 0 10px 30px -10px hsl(41 91% 55% / 0.4);
+    --shadow-soft: 0 4px 20px -5px hsl(0 0% 0% / 0.2);
+    --shadow-glow: 0 0 40px hsl(41 91% 55% / 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  
+  /* Typography Classes */
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+  
+  .font-body {
+    font-family: var(--font-body);
+  }
+  
+  /* Sacred Animations */
+  .animate-fade-in {
+    animation: fade-in 0.6s ease-out;
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-prayer-flag {
+    animation: prayer-flag 3s ease-in-out infinite;
+  }
+  
+  /* Smooth Scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Heritage Button Variants */
+  .btn-heritage {
+    @apply bg-gradient-to-r from-primary to-primary-glow text-primary-foreground px-8 py-4 rounded-xl font-semibold text-lg shadow-heritage hover:shadow-saffron transition-all duration-300 hover:scale-105;
+  }
+  
+  .btn-saffron {
+    @apply bg-gradient-to-r from-saffron to-saffron-light text-primary px-8 py-4 rounded-xl font-semibold text-lg shadow-saffron hover:shadow-heritage transition-all duration-300 hover:scale-105;
+  }
+  
+  .btn-outline-saffron {
+    @apply border-2 border-saffron text-saffron bg-transparent px-8 py-4 rounded-xl font-semibold text-lg hover:bg-saffron hover:text-primary transition-all duration-300;
+  }
+  
+  /* Heritage Cards */
+  .card-heritage {
+    @apply bg-card border border-border rounded-2xl p-6 shadow-soft hover:shadow-heritage transition-all duration-300;
+  }
+  
+  .card-monastery {
+    @apply bg-gradient-to-br from-card to-card-heritage border border-border rounded-2xl overflow-hidden shadow-heritage hover:shadow-saffron transition-all duration-500 hover:-translate-y-2;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes prayer-flag {
+  0%, 100% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+}
