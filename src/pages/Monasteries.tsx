@@ -26,4 +26,5 @@ const Monasteries = () => {
   );
 };
 
+
 export default Monasteries;
